@@ -23,7 +23,6 @@ function check() {
 	if (iterations < desiredIterations) {
 		iterations++;
 		var randnum = Math.floor(Math.random() * 6 + 1);
-		console.log(iterations);
 
 		if (randnum == 1) {
 			die.one++;
