@@ -48,3 +48,4 @@ for x in progressbar(range(desIterations), "",40):
 
 print("1: " + str(round((one / iterations)*100, 2)) + "%  \n2: " + str(round((two /                           iterations)*100, 2))+"% \n3: " + str(round((three / iterations)*100, 2))+"% \n4: " + str(round((four / iterations)*100, 2))+"% \n5: " + str(round((five / iterations)*100, 2))+"% \n6: " + str(round((six / iterations)*100, 2))+"%")
 input()
+print("1: " + str(round((one / iterations)*100, 2)) + "%  \n2: " + str(round((two /                           iterations)*100, 2))+"% \n3: " + str(round((three / iterations)*100, 2))+"% \n4: " + str(round((four / iterations)*100, 2))+"% \n5: " + str(round((five / iterations)*100, 2))+"% \n6: " + str(round((six / iterations)*100, 2))+"%")
