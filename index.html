@@ -1,35 +1,51 @@
 <html>
-    <head>
-        <title>Dice predictor</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
+  <head>
+    <title>Dice predictor</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <body class="">
+  <body class="">
+    <div class="container">
+      <div id="app">
+        <h1>🎲 Predictor</h1>
 
-        
-
-            <div class="container">
-                    <div id="app">
-                            <h1>🎲 Predictor</h1>
-
-                   <img width="70rem" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Alea_1.png">: {{((die.one / iterations) * 100 ).toFixed(2)}}% <br>
-                   <img width="70rem" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Alea_2.png">: {{((die.two / iterations) * 100 ).toFixed(2)}}% <br>
-                   <img width="70rem" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Alea_3.png">: {{((die.three / iterations) * 100 ).toFixed(2)}}% <br>
-                   <img width="70rem" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Alea_4.png">: {{((die.four / iterations) * 100 ).toFixed(2)}}% <br>
-                   <img width="70rem" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Alea_5.png">: {{((die.five / iterations) * 100 ).toFixed(2)}}% <br>
-                   <img width="70rem" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Alea_6.png">: {{((die.six / iterations) * 100).toFixed(2)}}% <br>
-                    <br> 
-                    <span title="Current iterations">💯: {{iterations }}</span> <br>
-                    <span title="Current random number">#️⃣: {{die.currNum}}</span>
-                    <br>
-<!--                    Šance, že je 👑 P.K. úžasná: 100% --> 
-                  </div>
-                  
-              
-                    </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="main.js"></script>
-    </body>
-</html>    
+        <img
+          width="70rem"
+          src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Alea_1.png"
+        />: {{((die.one / iterations) * 100 ).toFixed(2)}}% <br />
+        <img
+          width="70rem"
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Alea_2.png"
+        />: {{((die.two / iterations) * 100 ).toFixed(2)}}% <br />
+        <img
+          width="70rem"
+          src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Alea_3.png"
+        />: {{((die.three / iterations) * 100 ).toFixed(2)}}% <br />
+        <img
+          width="70rem"
+          src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Alea_4.png"
+        />: {{((die.four / iterations) * 100 ).toFixed(2)}}% <br />
+        <img
+          width="70rem"
+          src="https://upload.wikimedia.org/wikipedia/commons/5/55/Alea_5.png"
+        />: {{((die.five / iterations) * 100 ).toFixed(2)}}% <br />
+        <img
+          width="70rem"
+          src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Alea_6.png"
+        />: {{((die.six / iterations) * 100).toFixed(2)}}% <br />
+        <br />
+        <span title="Current iterations">💯: {{iterations }}</span> <br />
+        <span title="Current random number">#️⃣: {{die.currNum}}</span>
+        <br />
+        <!-- Šance, že je 👑 P.K. úžasná: 100% -->
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
