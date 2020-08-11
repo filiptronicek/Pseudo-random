@@ -1,7 +1,10 @@
-var iterations = 0;
-//var desiredIterations = prompt('Kolik iterací?');
-var desiredIterations = 150000;
-var die = {
+const st = new Date();
+
+let iterations = 0;
+
+const desiredIterations = 1000;
+
+let die = {
   one: 0,
   two: 0,
   three: 0,
@@ -12,7 +15,7 @@ var die = {
   currNum: 0,
 };
 
-var myObject = new Vue({
+const myObject = new Vue({
   el: "#app",
   data: {
     die: die,
@@ -22,29 +25,37 @@ var myObject = new Vue({
 function check() {
   if (iterations < desiredIterations) {
     iterations++;
-    var randnum = Math.floor(Math.random() * 6 + 1);
+    const randnum = Math.floor(Math.random() * 6 + 1);
 
-    if (randnum == 1) {
-      die.one++;
-    } else if (randnum == 2) {
-      die.two++;
-    } else if (randnum == 3) {
-      die.three++;
-    } else if (randnum == 4) {
-      die.four++;
-    } else if (randnum == 5) {
-      die.five++;
-    } else if (randnum == 6) {
-      die.six++;
-    }
+	switch (randnum) {
+		case 1:
+			die.one ++;
+			break;
+		case 2:
+			die.two ++;
+			break;
+		case 3:
+			die.three ++;
+			break;
+		case 4:
+			die.four ++;
+			break;
+		case 5:
+			die.five ++;
+			break;
+		case 6:
+			die.six ++;
+			break;
+	}
+
     die.currNum = randnum;
     die.iterations++;
   } else {
     clearInterval(checkTimer);
-    console.log("Completed " + iterations + " iterations");
-    console.log(die);
+	const en = new Date();
+	console.log(en - st);
   }
 }
-var checkTimer = setInterval(() => {
+const checkTimer = setInterval(() => {
   check();
 }, 1);
