@@ -2,7 +2,7 @@ const st = new Date();
 
 let iterations = 0;
 
-const desiredIterations = 1000;
+const desiredIterations = 100000;
 
 let die = {
   one: 0,
@@ -22,40 +22,33 @@ const myObject = new Vue({
   },
 });
 
-function check() {
-  if (iterations < desiredIterations) {
-    iterations++;
-    const randnum = Math.floor(Math.random() * 6 + 1);
+while (iterations < desiredIterations) {
+  iterations++;
+  const randnum = Math.floor(Math.random() * 6 + 1);
 
-	switch (randnum) {
-		case 1:
-			die.one ++;
-			break;
-		case 2:
-			die.two ++;
-			break;
-		case 3:
-			die.three ++;
-			break;
-		case 4:
-			die.four ++;
-			break;
-		case 5:
-			die.five ++;
-			break;
-		case 6:
-			die.six ++;
-			break;
-	}
-
-    die.currNum = randnum;
-    die.iterations++;
-  } else {
-    clearInterval(checkTimer);
-	const en = new Date();
-	console.log(en - st);
+  switch (randnum) {
+    case 1:
+      die.one++;
+      break;
+    case 2:
+      die.two++;
+      break;
+    case 3:
+      die.three++;
+      break;
+    case 4:
+      die.four++;
+      break;
+    case 5:
+      die.five++;
+      break;
+    case 6:
+      die.six++;
+      break;
   }
+
+  die.currNum = randnum;
+  die.iterations++;
 }
-const checkTimer = setInterval(() => {
-  check();
-}, 1);
+const en = new Date();
+console.log(en - st);
