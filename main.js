@@ -2,7 +2,7 @@ const st = new Date();
 
 let iterations = 0;
 
-const desiredIterations = 100000;
+const desiredIterations = 10000000;
 
 let die = {
   one: 0,
